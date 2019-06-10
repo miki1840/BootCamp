@@ -1,0 +1,23 @@
+﻿<Window x:Class="BootCamp.Windows.ProductRaportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BootCamp.Windows"
+        mc:Ignorable="d"
+        Title="Raport produktów" Height="450" Width="800" Background="{x:Null}">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="655*"/>
+            <ColumnDefinition Width="137*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="TitleLable" Content="" HorizontalAlignment="Left" Margin="370,25,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="RaportDataGrid" HorizontalAlignment="Left" Height="305" Margin="35,65,0,0" VerticalAlignment="Top" Width="715" Grid.ColumnSpan="2" SelectionMode="Single" AutoGenerateColumns="False" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="NameColumn" Header="Nazwa" Binding="{Binding Name}" CanUserReorder="False"/>
+                <DataGridTextColumn x:Name="QuantityColumn" Header="Ilośc" Binding="{Binding Quantity}" CanUserReorder="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
